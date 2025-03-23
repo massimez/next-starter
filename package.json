@@ -10,7 +10,11 @@
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
-    "lint:fix": "next lint --fix"
+    "lint:fix": "next lint --fix",
+    "preview": "next build && next start",
+    "prepare": "husky",
+    "typecheck": "tsc --noEmit --pretty",
+    "clean": "rimraf .next out"
   },
   "dependencies": {
     "next": "15.2.3",
@@ -35,6 +39,8 @@
     "prettier-plugin-tailwindcss": "0.6.11",
     "tailwindcss": "4.0.15",
     "typescript": "5.8.2",
-    "typescript-eslint": "8.27.0"
+    "typescript-eslint": "8.27.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0"
   }
 }
