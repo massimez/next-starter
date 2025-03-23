@@ -65,6 +65,13 @@ export default tseslint.config(
       'import/newline-after-import': 'error',
       'import/no-duplicates': 'error',
       'jsx-a11y/accessible-emoji': 'error',
+      'react/self-closing-comp': [
+        'warn',
+        {
+          component: true,
+          html: true,
+        },
+      ],
     },
   },
   {
